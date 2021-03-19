@@ -10,7 +10,16 @@ print(arr)
 arr.reverse()
 print(arr)
 
+#using function
 
+
+from array import *
+arr=array('i',[])
+def Arr(arr):
+    
+    print(arr)
+
+Arr([1,2,3,4,5,6])
 
 
 
