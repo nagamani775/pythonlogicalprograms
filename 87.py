@@ -8,3 +8,4 @@ def upper(str):
     print(str.upper())
 
 upper('nagamani')
+
