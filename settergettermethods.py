@@ -14,7 +14,7 @@ class Employee:
     def get(self):
         return self.ename,self.eno,self.esal
 
-n=int(input("enter no.of students:"))
+n=int(input("enter no.of employees:"))
 for i in range(n):
     e=Employee()
     ename=input("enter Employee name:")
