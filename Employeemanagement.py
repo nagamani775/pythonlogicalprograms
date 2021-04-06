@@ -12,7 +12,7 @@ class Employee:
         print("eno is:",self.eno)
         print("esal is:",self.esal)
 
-    def m1(self):
+    def des(self):
         del self.ename,self.eno,self.esal
         print("Employee details can be deleted successfully")
 
@@ -21,18 +21,24 @@ class Employee:
         eno=int(input("enter updated Employee number is:"))
         esal=int(input("enter updated Employee salary is:"))
         print("Employee updated details are:")
-        print("ename:",ename)
         print("eno :",eno)
+        if eno not in e:
+            print("sorry this no is not existed in old account")
+        print("ename:",ename)
         print("esal is:",esal)
         print("Employee details updated successfully")
-
 n=int(input("enter number of Employees:"))
 for i in range(n):
-    ename=input("enter name:")
-    eno=int(input("enter eno:"))
-    esal=int(input("enter esalary"))
+    ename=input("enter Employee name:")
+    eno=int(input("enter eno"))
+    esal=int(input("enter esal"))
     e=Employee(ename,eno,esal)
-    e.info()
-    e.modify()
-    e.m1()
-    print(e.__dict__)
+    while True:
+        print('1.g-info\n2.d-des\n3.u-modify')
+        option=input("choose your option:")
+        if option=='g' or option=='G':
+            e.info()
+        elif option=='d' or option=='D':
+            e.des()
+        else:
+            e.modify()
